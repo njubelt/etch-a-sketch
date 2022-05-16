@@ -11,6 +11,9 @@ body {
     left: 0;
     width: 100%;
     height: 40px;
+    font-family: 'DogicaPixelRegular';
+    font-weight: normal;
+    font-style: normal;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,28 +23,24 @@ body {
     position: fixed;
     bottom: 0;
     background-color: #437aa7;
-    color: #ffffff;
-    font-family: 'DogicaPixelRegular';
-    font-weight: normal;
-    font-style: normal;
+    color: #c8e6ff;
+
     font-size: 15px;  
 }
 
 .header {
     top: 20px;
-    font-family: 'DogicaPixelRegular';
-    font-weight: normal;
-    font-style: normal;
     font-size: 50px;
     margin-bottom: 25px;
     margin-top: 25px;    
 }
 
-.mainGrid {
+#mainGrid {
     width: 70vh;
     height: 70vh;
     border: 2px solid black;
     background-color: #ffffff;
+    display: grid;
 }
 
 a:link {
