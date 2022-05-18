@@ -47,6 +47,10 @@ body {
     gap: 0px;
 }
 
+#grid:hover {
+    background-color: black;
+}
+
 a:link {
     color: #ffffff;
 }
