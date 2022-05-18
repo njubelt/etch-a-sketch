@@ -1,16 +1,30 @@
-createGrid(16);
+createGrid(25);
+
+var resolutionSlider = document.getElementById("resolution");
+var output = document.getElementById("resolutionValue");
+output.innerHTML = resolutionSlider.value;
+
+resolutionSlider.oninput = function() {
+     output.innerHTML = this.value;
+     //clearGrid();
+     createGrid(this.value);
+   } 
+
+function clearGrid() {
+     cdiv.removeChild(div);
+}
 
 function createGrid(numberPerRow) {
      const cdiv = document.getElementById('mainGrid');
      const total = numberPerRow * numberPerRow;
 
-     for (let i = 1; i < total; i++) {
+     for (let i = 0; i < total; i++) {
           const div = document.createElement('div');
-     
-     div.style.cssText = "border: 1px solid black; height: 25px; width: 25px; display: flex";
+          const dim = 500/numberPerRow;
+          div.style.cssText = "margin-top: -1px; margin-left: -1px; border-bottom: 1px solid black; border-right: 1px solid black; height:" + dim + "px; width:" + dim + "px;";
      
 
-     cdiv.appendChild(div);
+          cdiv.appendChild(div);
      }
 }
 
