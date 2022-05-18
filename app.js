@@ -1,8 +1,8 @@
-createGrid(25);
+createGrid(25); //default value
 
 var resolutionSlider = document.getElementById("resolution");
 var output = document.getElementById("resolutionValue");
-output.innerHTML = resolutionSlider.value;
+output.innerHTML = resolutionSlider.value;//display default value on refresh
 
 resolutionSlider.oninput = function() {
      output.innerHTML = this.value;
@@ -23,7 +23,7 @@ function createGrid(numberPerRow) {
           const div = document.createElement('div');
           const dim = 500/numberPerRow;
           div.style.cssText = "margin-top: -1px; margin-left: -1px; border-bottom: 1px solid black; border-right: 1px solid black; height:" + dim + "px; width:" + dim + "px;";
-     
+          div.setAttribute("id", "grid")
 
           cdiv.appendChild(div);
      }
