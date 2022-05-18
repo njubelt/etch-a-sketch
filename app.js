@@ -6,12 +6,13 @@ output.innerHTML = resolutionSlider.value;
 
 resolutionSlider.oninput = function() {
      output.innerHTML = this.value;
-     //clearGrid();
+     clearGrid();
      createGrid(this.value);
    } 
 
 function clearGrid() {
-     cdiv.removeChild(div);
+     const cdiv = document.getElementById('mainGrid');
+     cdiv.innerHTML = "";
 }
 
 function createGrid(numberPerRow) {
