@@ -1,21 +1,25 @@
-const cdiv = document.getElementById('mainGrid');
-var resolutionSlider = document.getElementById("resolution");
-var output = document.getElementById("resolutionValue");
-let cell = document.getElementById("grid");
-output.innerHTML = resolutionSlider.value;//display default value on refresh
+let cdiv = document.getElementById('mainGrid');
+let resolutionSlider = document.getElementById("resolution");
+let output = document.getElementById("resolutionValue");
+
+//output.innerHTML = resolutionSlider.value;//display default value on refresh
 
 createGrid(25); //default value
 
+let cell = document.getElementsByClassName("grid");
 cell.addEventListener("mouseover", function( event ) {
   alert("mouse over test!")
-  , false});
+  });
 
+
+//FROM DISCORD: give it a class, and then use getElementsByClassName or querySelectorAll
 
 resolutionSlider.oninput = function() {
      output.innerHTML = this.value;
      clearGrid();
      createGrid(this.value);
    } 
+
 
 function clearGrid() {
      cdiv.innerHTML = "";
@@ -27,8 +31,8 @@ function createGrid(numberPerRow) {
      for (let i = 0; i < total; i++) {
           const div = document.createElement('div');
           const dim = 500/numberPerRow;
-          div.style.cssText = "margin-top: -1px; margin-left: -1px; border-bottom: 1px solid black; border-right: 1px solid black; height:" + dim + "px; width:" + dim + "px;";
-          div.setAttribute("id", "grid")
+          div.style.cssText = "height:" + dim + "px; width:" + dim + "px;";
+          div.setAttribute("class", "grid")
           cdiv.appendChild(div);
      }
 }
