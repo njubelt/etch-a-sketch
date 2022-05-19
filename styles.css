@@ -54,6 +54,12 @@ body {
     border-right: 1px solid black; 
 }
 
+#inputContainer {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
 a:link {
     color: #ffffff;
 }
