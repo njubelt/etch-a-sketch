@@ -1,7 +1,7 @@
 let cdiv = document.getElementById('mainGrid');
 let resolutionSlider = document.getElementById("resolution");
 let output = document.getElementById("resolutionValue");
-let defaultVal = 25;//default value
+let defaultVal = 88;//default value
 
 output.innerHTML = defaultVal; //initialize slider value with default
 createGrid(defaultVal); //create grid of defaultVal^2 resolution
@@ -9,7 +9,7 @@ createGrid(defaultVal); //create grid of defaultVal^2 resolution
 //function to generate grid
 function createGrid(numberPerRow) {
      let total = numberPerRow * numberPerRow;//number of cells in grid
-     let dim = 500/numberPerRow;//maintain resolution 
+     let dim = (500/numberPerRow) - .0075;//maintain resolution 
 
      for (let i = 0; i < total; i++) { //generate individual cells
           const div = document.createElement('div');
