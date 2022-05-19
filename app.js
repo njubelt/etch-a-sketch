@@ -6,13 +6,23 @@ let output = document.getElementById("resolutionValue");
 
 createGrid(25); //default value
 
-let cell = document.getElementsByClassName("grid");
-cell.addEventListener("mouseover", function( event ) {
-  alert("mouse over test!")
-  });
-
 
 //FROM DISCORD: give it a class, and then use getElementsByClassName or querySelectorAll
+
+function createGrid(numberPerRow) {
+     let total = numberPerRow * numberPerRow;
+     let dim = 500/numberPerRow;
+
+     for (let i = 0; i < total; i++) {
+          const div = document.createElement('div');
+          div.style.cssText = "height:" + dim + "px; width:" + dim + "px;";
+          div.setAttribute("class", "grid");
+          div.addEventListener("mouseover", function( event ) {
+               div.style.backgroundColor = "black";
+               });
+          cdiv.appendChild(div);
+     }
+}
 
 resolutionSlider.oninput = function() {
      output.innerHTML = this.value;
@@ -24,16 +34,3 @@ resolutionSlider.oninput = function() {
 function clearGrid() {
      cdiv.innerHTML = "";
 }
-
-function createGrid(numberPerRow) {
-     const total = numberPerRow * numberPerRow;
-
-     for (let i = 0; i < total; i++) {
-          const div = document.createElement('div');
-          const dim = 500/numberPerRow;
-          div.style.cssText = "height:" + dim + "px; width:" + dim + "px;";
-          div.setAttribute("class", "grid")
-          cdiv.appendChild(div);
-     }
-}
-
