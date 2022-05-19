@@ -1,7 +1,9 @@
 let cdiv = document.getElementById('mainGrid');
 let resolutionSlider = document.getElementById("resolution");
 let output = document.getElementById("resolutionValue");
+let clearButton = document.getElementById("clearButton");
 let defaultVal = 25;//default value
+
 
 output.innerHTML = defaultVal; //initialize slider value with default
 createGrid(defaultVal); //create grid of defaultVal^2 resolution
@@ -21,6 +23,13 @@ function createGrid(numberPerRow) {
                });
           cdiv.appendChild(div);
      }
+}
+
+clearButton.onclick = function() {clearCells()};
+
+function clearCells() {
+     clearGrid();
+     createGrid(resolutionSlider.value);
 }
 
 //update when slider is changed
