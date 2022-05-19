@@ -50,8 +50,8 @@ body {
 .grid {
     margin-top: -1px; 
     margin-left: -1px; 
-    border-bottom: 1px solid black; 
-    border-right: 1px solid black; 
+    border-bottom: 1px solid lightgray; 
+    border-right: 1px solid lightgrey; 
 }
 
 #inputContainer {
