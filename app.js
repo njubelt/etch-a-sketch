@@ -2,12 +2,7 @@ let cdiv = document.getElementById('mainGrid');
 let resolutionSlider = document.getElementById("resolution");
 let output = document.getElementById("resolutionValue");
 
-//output.innerHTML = resolutionSlider.value;//display default value on refresh
-
 createGrid(25); //default value
-
-
-//FROM DISCORD: give it a class, and then use getElementsByClassName or querySelectorAll
 
 function createGrid(numberPerRow) {
      let total = numberPerRow * numberPerRow;
