@@ -47,6 +47,13 @@ body {
     gap: 0px;
 }
 
+.grid {
+    margin-top: -1px; 
+    margin-left: -1px; 
+    border-bottom: 1px solid black; 
+    border-right: 1px solid black; 
+}
+
 #cellDark {
     background-color: black;
 }
