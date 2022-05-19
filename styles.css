@@ -47,8 +47,12 @@ body {
     gap: 0px;
 }
 
-#grid:hover {
+#cellDark {
     background-color: black;
+}
+
+#cellWhite {
+    background-color: white;
 }
 
 a:link {
