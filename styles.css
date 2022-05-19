@@ -54,14 +54,6 @@ body {
     border-right: 1px solid black; 
 }
 
-#cellDark {
-    background-color: black;
-}
-
-#cellWhite {
-    background-color: white;
-}
-
 a:link {
     color: #ffffff;
 }
