@@ -1,7 +1,7 @@
 let cdiv = document.getElementById('mainGrid');
 let resolutionSlider = document.getElementById("resolution");
 let output = document.getElementById("resolutionValue");
-let defaultVal = 88;//default value
+let defaultVal = 25;//default value
 
 output.innerHTML = defaultVal; //initialize slider value with default
 createGrid(defaultVal); //create grid of defaultVal^2 resolution
